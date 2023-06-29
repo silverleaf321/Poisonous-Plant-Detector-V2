@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Use our Product">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}" media="screen">
+<link rel="stylesheet" href="Results.css" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.18.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#2c4776">
+    <meta property="og:title" content="results">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-13f0"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-headline u-text u-text-1">
+          <a href="/">Toxic Plant Detector</a>
+        </h3>
+
+      </div></header>
+    <section class="u-align-left u-clearfix u-custom-color-2 u-section-1" id="sec-5a4c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-body-alt-color u-text-1">Use our product</h1>
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-2"></div>
+        <a href="../" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1" id='seefood_button'><form id='seefood_form' method=post enctype=multipart/form-data>
+                        <input id="se" name="file" type="file" onchange="this.form.submit();" hidden/>
+                    </form>Try again!</a>
+      </div>
+    </section>
+    
+    
+    <section class="u-clearfix u-section-1" id="sec-8cf7">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1 u-grey-5">
+          <div class="u-layout" style="">
+            <div class="u-layout-row" style="">
+              <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-shading u-size-30 u-size-xs-60" style="background-image: url({{ url_for('files', filename=filename) }}); background-size: contain;" data-image-width="1280" data-image-height="913">
+                <div class="u-container-layout u-container-layout-1" src="">
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                    <h3 class="mbr-section-title display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
+
+                    {% if labels == 'nothing to see here' %}
+                    <div>We missed? See why below.</div>
+                    {% else %}
+                    <div class="lead"><em>with {{ confidences }} confidence.</em></div>
+                    {% endif %}
+                  <!--     button added for uploading a photo    -->
+                  <div class="mbr-buttons--left">
+                      <div class="mbr-section-btn">
+                          <a class="u-btn u-button-style u-palette-4-dark-2 u-btn-1" href='https://www.ai-camp.org'>
+                              Visit AI Camp and see how we did this
+                          </a>
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="u-clearfix u-custom-color-1 u-footer" id="sec-dc71"><div class="u-align-left u-clearfix u-sheet u-sheet-1"></div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
+        <span>HTML Template</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/static-site-generator" target="_blank">
+        <span>Static Website Generators</span>
+      </a>.
+    </section>
+
+        <script>
+        // added to get upload with a button working
+        document.getElementById('seefood_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('seefood_input_field').click();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // seefood_input_field
+            $('#seefood_button').click(function() {
+
+            });
+        });
+    </script>
+ 
+  </body>
+</html>
