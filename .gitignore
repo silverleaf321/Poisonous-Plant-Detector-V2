@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# yolo.weights file - too big for github
+app/yolo/yolo.weights
