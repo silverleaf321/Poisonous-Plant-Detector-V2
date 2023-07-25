@@ -14,7 +14,7 @@ from utils import get_base_url, allowed_file, and_syntax
     port may need to be changed if there are multiple flask servers running on same server
     comment out below three lines of code when ready for production deployment
 '''
-# port = 12354
+port = 80
 # base_url = get_base_url(port)
 # app = Flask(__name__, static_url_path=base_url+'static')
 
@@ -106,8 +106,8 @@ if __name__ == "__main__":
     coding center code
     '''
     # IMPORTANT: change the cocalc2.ai-camp.org to the site where you are editing this file.
-    website_url = 'cocalc2.ai-camp.org'
-    print(f"Try to open\n\n    https://{website_url}" + base_url + '\n\n')
+    # website_url = 'cocalc2.ai-camp.org'
+    # print(f"Try to open\n\n    https://{website_url}" + base_url + '\n\n')
 
     # remove debug=True when deploying it
     app.run(host = '0.0.0.0', port=port, debug=True)
